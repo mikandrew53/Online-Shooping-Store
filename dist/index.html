@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header-container">
+            <img src="./img/summer.jpeg" alt="" id="header">
+    </div>
+        <h2 class="heading text-primary">T-SHIRT ORDER FORM</h2>
+        
+        <div id="items" class="p-xy">
+            <h3 class="text-primary">Select your item</h3>
+            <form action="#" id="selectItem">
+                <div class="container">
+                    <div>
+                        <label class="item" id="red-box">
+                            <input type="radio" name="item" class="checkbox" id="redCheckbox" value="15.99">                            
+                        </label>
+                        <p>$15.99</p>
+                    </div>
+                    <div>
+                        <label class="item" id="blue-box">
+                            <input type="radio" name="item" class="checkbox" id="blueCheckbox" value="25.99">
+                        </label>
+                        <p>$25.99</p>
+                    </div>
+                    <div>
+                        <label class="item" id="orange-box">
+                            <input type="radio" name="item" class="checkbox" id="orangeCheckbox" value="9.99">
+                        </label>
+                        <p>$9.99</p>
+                    </div>
+                    <div class="radioLabel">
+                        <label class="item" id="green-box">
+                            <input type="radio" name="item" class="checkbox" id="greenCheckbox" value="19.99">
+                        </label>
+                        <p>$19.99</p>
+                    </div>
+                </div>
+                <div class="output">
+                    <div class="output-container">
+                        <label for="" class="text-primary">Quantity</label> 
+                        <input type="number" min="1" max="10" id="item-quantity" value="1">
+                        <p class="text-primary">Cart</p>
+                    </div>
+                    
+                    <div class="output-container">
+                        <label for="size" class="text-primary">Size</label>
+                        <select name="size" id="shirtSize" aria-placeholder="XS">
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                            <option value="xxl">XXL</option>
+                            <option value="xxxl">XXXL</option>
+                        </select>
+                        <button type="submit" id="anotherItem" class="btn-disabled" disabled="true">Add Item</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Use Grid -->
+    <div id="cart" class="p-xy"></div>
+    <br><br>
+    
+    <div class = "hr"></div>
+
+    <form action="#" id="payment" class="p-xy">
+        <h3 class="text-primary">Credit Card</h3>
+        <div class="payment-container">
+            <div class="payment-container-items">
+                <div class="payment-container-item">
+                    <label for="firstName" class="text-secondary">First Name</label>
+                    <input type="text" class="payment-info" id="firstName">
+                </div>
+                <div class="payment-container-item">
+                    <label for="lastName" class="text-secondary">Last Name</label>
+                    <input type="text" class="payment-info" id="lastName">
+                </div>
+            </div>
+
+            <div class="payment-container-items">
+                <div class="payment-container-item">
+                    <label for="cardNum" class="text-secondary">Credit Card Number(XXXX_XXXX_XXXX_XXXX)</label>
+                    <input type="text" name="" id="creditCardNumber" class="payment-info">
+                    <!--        <input type="text" pattern="[0-9]{16}" id="creditCardNumber" class="payment-info" /> -->
+                </div>
+                <div class="payment-container-item">
+                    
+                    <label for="securityCode" class="text-secondary">Security Code (XXX)</label>
+                    <input type="text" pattern="[0-9]{3}" class="payment-info" id="securityCode"/>
+                    <!-- <input type="text" name="" id="" class="payment-info">                 -->
+                </div>
+            </div>
+
+            <div class="payment-container-items">
+                    <div class="payment-container-item">
+                        <label for="expirationMonth" class="text-secondary">Expiration Month(1-12)</label>
+                        <input type="text" name="" id="cardExperationMonth" class="payment-info">
+                        <!-- <input type="number" name="" id="cardExperationMonth" class="payment-info" min="1" max="12"> -->
+                    </div>
+                    <div class="payment-container-item">
+                        <label for="expirationYear" class="text-secondary" id="cardExperationYearLabel">Expiration Year</label>
+                        <input type="text" name="" id="cardExperationYear" class="payment-info">
+                    </div>
+            </div>
+        </div>
+        <div id="shippingAddress">
+            <h3 class="text-primary">Shipping Address</h3>
+            <div class="shipping-container-item">
+                <input type="text" class="shipping-info" id="streetAddress">
+                <label for="streetAdress" class="text-secondary">Street Address</label>
+            </div>
+
+            <div class="shipping-container-item">
+                <input type="text" class="shipping-info" id="streetAddressLine2">
+                <label for="streetAdress2" class="text-secondary">Street Address Line 2</label>
+            </div>
+            <div class="shipping-container-items">
+                <div class="shipping-container-item">
+                    <input type="text" class="shipping-info" id="city">
+                    <label for="city" class="text-secondary" >City</label>
+                </div>
+                <div class="shipping-container-item">
+                    <input type="text" class="shipping-info" id="state">
+                    <label for="state" class="text-secondary">State / Province</label>
+                </div>
+            </div>
+            <div class="shipping-container-items">
+                <div class="shipping-container-item">
+                    <input type="text" id="postalCode" class="shipping-info">
+                    <label for="state" class="text-secondary">Postal / Zip Code</label>
+                </div>
+                <div class="shipping-container-item">
+                    <datalist id="countries"></datalist>
+                    <input type="text" list="countries" class="shipping-info" id="country"/>
+                    <label for="country" class="text-secondary">Select Country</label>
+                </div>
+            </div>
+            <div class="shipping-container-item">
+                <label for="emailAddress" class="text-primary">Email</label>
+                <input type="email" name="emailAddress" id="e-mail" class="shipping-info"> 
+                <p class="email-example">example@example.com</p>
+            </div>
+
+            <br><br>
+            <button type="submit" id="payment-btn" class="btn btn-submit">Submit</button>
+        </div>
+    </form>
+    <button class="btn danger-btn" id="clear-btn">Clear</button>
+
+    <!-- Delivery date output -->
+    <div id="delivery">
+        <h3 class="text-primary delivery-date-title">Delivery Date</h3>
+        <p id="deliveryDate"></p>
+    </div>
+    <script src="./Round.js"></script>
+    <script src="./countries.js"></script>
+    <script src="./ui.js"></script>
+    <script src="./payement.js"></script>
+    <script src="./cart.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
+
+

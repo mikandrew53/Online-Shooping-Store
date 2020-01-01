@@ -1,0 +1,267 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+// utility
+.p-xy{padding: 1rem 10rem;}
+
+.text-primary{color: #004C92;}
+.text-secondary{color: #6F6F6F;}
+.email-example{
+    font-size: 0.75rem;
+}
+
+.heading {
+    word-spacing: 1rem;
+    text-align: center;
+}
+
+.btn{
+    &:hover{
+        cursor: pointer;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+.btn-primary{
+    background: #8EC55C;
+    border: none;
+    padding: 0.25rem 1rem;
+    color: #fff;
+    border-radius: 5px;
+    &:hover{
+        background: #8EC000;
+    }
+
+}
+.btn-submit{
+    background: #8EC55C;
+    border: none;
+    padding: 0.25rem 2.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    border-radius: 5px;
+    &:hover{
+        background: #8EC000;
+    }
+}
+
+.btn-disabled {
+    background: grey;
+    border: none;
+    padding: 0.25rem 1rem;
+    color: #fff;
+    border-radius: 5px;
+    &:hover{
+        cursor: default;
+    }
+}
+
+.danger-btn{
+    background: #DE0900;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    margin: 1rem 10rem;
+
+    &:hover{
+        background: #A30000;
+    }
+}
+
+
+.hr{
+    margin: 1rem 10rem;
+    border-top: solid 1.5px #9A9A9A
+}
+
+
+// header
+.header-container{
+    margin:2rem 0rem;
+        #header{
+            display: block;
+            border-top: 2px solid #F1CD7B;
+            border-radius: 10px;
+            margin: auto;
+            width: 800px;
+            height: 200px;
+        }
+}
+
+#items{
+    #selectItem{
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 2rem;
+            .item{
+                display: block;
+                border: black solid;
+                width: 12rem;
+                height: 12rem;
+                &:hover{
+                    cursor: pointer;
+                }
+                .checkbox:hover{cursor: pointer;}
+            }
+            #red-box {background: url('../img/red.jpeg') no-repeat center center/cover;}
+            #blue-box {background: url('../img/blue.jpeg') no-repeat center center/cover;}
+            #orange-box {background: url('../img/orange.jpeg') no-repeat center center/cover;}
+            #green-box {background: url('../img/green.jpeg') no-repeat center center/cover;}
+        }
+        
+        .output{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            .output-container{
+                #item-quantity{
+                    margin-right: 5rem;
+                    width: 35px;
+                    border: #CCC solid 1px;
+                    border-radius: 7px;
+                    background: #EEE;
+                    height: 25px;
+                    padding-left: 1rem;
+                    &:focus{
+                        outline: none;
+                        border: 1px solid #999;
+                        border-radius: 5px;
+                    }
+                }
+                #shirtSize{
+                    width: 110px;
+                    border: #CCC solid 1px;
+                    border-radius: 7px;
+                    background: #EEE;
+                    height: 25px;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    &:focus{
+                        outline: none;
+                        border: 1px solid #999;
+                        border-radius: 5px;
+                    }
+                
+                }
+                #anotherItem{
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+}
+
+#cart{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    .cart-header{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+    }
+
+    .cart-items{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        .cart-img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .total{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+    }
+}
+
+
+
+#payment{
+    .payment-container{
+        .payment-container-items{
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 1rem;
+            .payment-container-item{
+                display: flex;
+                flex-direction: column;
+                #firstName,
+                #creditCardNumber,
+                #cardExperationMonth
+                {
+                    margin-right: 1rem;
+                }
+                .payment-info{
+                    border: #CCC solid 1px;
+                    border-radius: 7px;
+                    background: #EEE;
+                    width: 400px;
+                    height: 25px;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+
+                    &:focus{
+                        outline: none;
+                        border: 1px solid #999;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+    #shippingAddress{
+        .shipping-container-item{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+            #e-mail{
+                margin-bottom: 0;
+                margin-top: 1rem;
+                padding-left: 1rem;
+            }
+        }
+        .shipping-container-items{
+            display: flex;
+        }
+        .shipping-info{
+            border: #CCC solid 1px;
+            border-radius: 7px;
+            background: #EEE;
+            height: 25px;
+            padding-left: 1rem;
+            
+            &:focus{
+                outline: none;
+                border: 1px solid #999;
+                border-radius: 5px;
+            }
+           }
+    }   
+}
+
+#delivery{
+    padding-top: 1rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+    padding-bottom: 10rem;
+    #deliveryDate{
+        display: none;
+    }
+}
+
